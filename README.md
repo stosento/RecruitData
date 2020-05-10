@@ -41,6 +41,7 @@ This is a <i>very</i> custom approach to gather data for a specific project. I'm
 
 For this specific extractor tool, it'd be nice for the following features:
 <ul>
+  <li>Walk through the set-up steps for you to run this file yourself (Downloading python, selenium web driver, beautiful soup, etc)</li>
   <li>Provide a list of years at runtime</li>
   <li>Provide a list of states at runtime</li>
   <li>Provide a list of of desired attributes to be written to the CSV file</li>
