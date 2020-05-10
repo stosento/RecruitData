@@ -48,4 +48,4 @@ For this specific extractor tool, it'd be nice for the following features:
 
 This is definitely a work in progress and something that I encourage others to make feature requests.
 
-Reach out to me @StephenToski and let me know any thoughts!
+Reach out to me on Twitter @StephenToski and let me know any thoughts!
