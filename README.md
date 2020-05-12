@@ -1,7 +1,16 @@
 # RecruitData
-A python project to extract information about recruits for given states / years
+A python project to extract information about:
+1. Recruits for given states / years
+2. Draft data
 
-As a part of a personal project to learn more data-mining / graphing techniques with Pandas / Matplotlib, I needed access to recruit data. I decided to use 247Composite as the source for this information, as it's a comprehensive rating combining existing ratings from services like 247, Rivals, & ESPN.
+This is the final assignment for a course using Pandas / Matplotlib for creating effective graphs. I extended this project 
+to learn more data-mining techniques and the process of grabbing data for manipulation. This project is split into three main sections.
+
+--------------------
+<h2>Recruit Data</h2>
+ <h4>read247.py</h4>
+
+For the recruit data, I decided to use 247Composite as the source for this information, as it's a comprehensive rating combining existing ratings from services like 247, Rivals, & ESPN.
 
 For my purposes, I was only interested in recruit data for a given range of years and for a select number of states.
 
@@ -13,6 +22,20 @@ In order to grab this information, the theory was simple:
 2. Define the list of states & years that we are interested in, construct the URL dynamically given these params
 3. Loop through the range of years for each state and grab ths data from the page we're interested in.
 4. Print that information to a CSV for easier consumption for other tools / purposes.
+
+--------------------
+<h2>Draft Data</h2>
+<h4>readDraft.py</h4>
+
+Pro Football reference seemed like the best place to grab the necessary data I needed for my purposes. They have a great tool to select years you're interested and provides a page with 300 rows. They also have a button for transforming the table into CSV data. Great! 
+
+In retrospect, it may have been easier to use BeautifulSoup a bit heavier than the procedure to hover & select the button to transform the table on each page, but alas, we made it work. The basic outline of the process goes as follows:
+
+1. Load URL for given draft years we're looking for
+2. Hover over the menu to expose the button to convert table to CSV data. Click button.
+3. Grab the element that holds the CSV, concatenate our string with that data.
+4. Continue 2-4 while there's still a "Next" button on the page, then do 2-4 once more at the end for the final page.
+5. Write the string to a CSV file.
 
 --------------------
 
